@@ -81,13 +81,13 @@ void loop()
   float v = analogRead(vaporSensor) * (5.0 / 1023.0);
   float b = analogRead(batteryVoltage) * (5.0 / 1023.0);
 
-  dataString += "d1,t";
+  dataString += "1,";
   dataString += String(t);
-  dataString += ",h";
+  dataString += ",";
   dataString += String(h);
-  dataString += ",v";
+  dataString += ",";
   dataString += String(v);
-  dataString += ",b";
+  dataString += ",";
   dataString += String(b);
   dataString += ",";
   dataString += String(clock.getDate());
@@ -126,5 +126,5 @@ void loop()
     t++;
   }
 
-  delay(5000);
+  delay(60000);
 }
